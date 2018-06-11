@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Strona Głowna</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'core/css/mystyle.css' %}">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'core/css/mystyleTEST.css' %}">
+		<script type="myJavaScriptTEST.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<img src="{% static 'core/img/zdjecie_startowe.jpg' %}" alt="kosz" style="width: 100%;">
+			<div class="centered">
+				<button class="btnSTART" onclick="document.getElementById('id01').style.display='block'" >Zaloguj się</button>
+			</div>
+
+			<div id='id01' class="modal">
+
+			<form class="modal-content animate" action={% url 'core:druzyna' %}>
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Zamknij">&times;</span>
+					<img src="{% static 'core/img/bit_logowanie.jpg' %}" alt="Logowanie" class="avatar">
+				</div>
+				<div class="imgcontainer" style="text-align: left;">
+					<label for="UserName"><b>Username</b></label>
+					<input type="text" placeholder="Enter Username" name="UserName" required>
+
+					<label for = "passW"><b>Password</b></label>
+					<input type="password" placeholder="Enter Password" name="passW" required>
+
+
+					<button type="submit" class="btn">Login</button>
+				</div>
+			</form>
+
+			</div>
+		</div>
+	</body>
+</html>

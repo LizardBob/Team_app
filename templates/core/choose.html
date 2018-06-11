@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Wybierz swoja role</title>
+    <link rel="stylesheet" href="{% static 'core/css/styll.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  </head>
+  <body background="{% static 'core/img/zdjecie_startowe.jpg' %}" alt="kosz" style="width: 100%;">
+
+    
+    <div class="alert alert-dismissible alert-primary">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong>ZAREJESTRUJ</strong>
+    </div>
+
+
+    <form class="reg" action={% url 'core:thank' %} method="post">
+      {% csrf_token %}
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+
+      <input class="btn btn-primary btn-lg" type="submit" name="" value="Zaloz konto">
+
+    </form>
+
+  </body>
+</html>

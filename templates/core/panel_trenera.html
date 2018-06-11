@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Witaj zawodniku</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'core/css/styll.css' %}">
+  </head>
+  <body background="{% static 'core/img/zdjecie_startowe.jpg' %}" alt="kosz" style="width: 100%;">
+    <h1>Trener</h1>
+
+
+
+
+        <h4>Choose Ur Team:</h4>
+          {% block content %}
+          <!-- {% if all_Teams %} -->
+            <ul>
+              {% for t in team.choice_set.all %}
+
+              <li> <a href={% url 'pan_zawodnika' t.idteam %}>{{ t.team_name }}</a> </li>
+              {% endfor %}
+            </ul>
+          {% else %}
+            <p>Nie ma dostepnych druzyn.</p>
+          {% endif %}
+
+          {% endblock %}
+
+
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'core/css/styll.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  </head>
+  <body background="{% static 'core/img/zdjecie_startowe.jpg' %}" alt="kosz" style="width: 100%;">
+{% block content %}
+
+    <h1>Welcome to our Application</h1>
+    <ul>
+      <li><strong>Druzyny:</strong> {{ num_Teams }}</li>
+      <li><strong>Uzytkownicy:</strong> {{ num_Users }}</li>
+    </ul>
+{% endblock %}
+<form class="dwa_el" method="post">
+  {% csrf_token %}
+    <label for="el_2"></label>
+
+  <a type="submit" class="btn btn-primary btn-lg" id="el_2" href="{% url 'core:choose' %}">Rejestracja </a>
+   <a type="button" class="btn btn-primary btn-lg" href={% url 'core:our_log' %}> Zaloguj</a>
+
+</form>
+
+
+
+  </body>
+</html>

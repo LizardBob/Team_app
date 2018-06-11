@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8">
+		<title>Strona Głowna</title>
+		<script type="myJavaScript.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'core/css/strona_glownaCSS.css' %}">
+
+	</head>
+	<body>
+		<div class="container">
+			<img src="zdjecie_startowe.jpg" alt="kosz" style="width: 100%">
+				<button type="button" class="btn btn-primary btn-lg">DRUŻYNA</button>
+				<button type="button" class="btn btn-primary btn-lg" style="top: 30%">TERMINARZ</button>
+				<button type="button" class="btn btn-primary btn-lg" style="top: 40%">LIGA</button>
+				<button type="button" class="btn btn-primary btn-lg" style="top: 50%">TRENINGI</button>
+		</div>
+	</body>
+</html>

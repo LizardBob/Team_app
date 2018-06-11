@@ -1,0 +1,89 @@
+h1{
+  text-align: center;
+  color: orange;
+}
+
+.trener{
+  position: fixed;
+
+    right: 50%;
+    top: 10%;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    color: orange;
+}
+
+.zawodnik{
+  position: fixed;
+    left: 50%;
+    top: 10%;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+    color: orange;
+}
+.reg{
+  font-style: oblique;
+  color: white;
+  position: absolute;
+  top: 35%;
+  left: 125px;
+}
+
+h4 {
+    font-family: 'Montserrat';
+    color: #FDFFFC;
+    text-align: center;
+    padding: 10px;
+    color: orange;
+    position: fixed;
+    top: 10%;
+    left: 60px;
+}
+
+
+
+a:link{
+    color: green
+    text-dec
+}
+
+a:active, a:visited{
+  color: yellow;
+}
+a:hover{
+  color: blue;
+}
+
+.przedjdz_d{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+}
+
+.dwa_el{
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+
+  padding: 10px;
+}
+
+li{
+  color: orange;
+}
+
+ul{
+  position: fixed;
+  top: 20%;
+  left: 60px;
+}
+
+label{
+  padding: 10px;
+}
